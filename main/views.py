@@ -28,5 +28,5 @@ def lkPage(request, urlid=None):
         if request.method == 'POST':
             form = forms.lkForm(request.POST, instance=instance)
             form.save()
-        context = {'form': form}
+        context = {'form': form, 'urlid': urlid}
         return render(request, 'main/lk.html', context)

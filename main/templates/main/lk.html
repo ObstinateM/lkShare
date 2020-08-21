@@ -3,14 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
     <title>lkShare</title>
+    <style>
+    
+    body{
+        background-color: #2C2A4A;
+        font-family: "Grand Hotel";
+    }
+
+    a{
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 2%;
+        magin-bottom: 100px;
+        background-color: #2C2A4A;
+        color: #FFD166;
+        font-size: 60px;
+    }
+    
+    label{
+        display: none;
+    }
+
+    input{
+        background-color: #FFD166;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 3%;
+        padding: 10px 30px 10px 30px;
+        font-size: 40px;
+        font-family: "Grand Hotel";
+    }
+
+    textarea{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+        width: 90%;
+        height: 65vh;
+    }
+
+    </style>
 </head>
 <body>
-    <h1>lkShare</h1>
+    <a href="{% url 'lkEmpty' %}">lkShare /{{ urlid }}</a>
     <form action="" method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="SAVE">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Enregistrer">
     </form>
+
 </body>
 </html>
