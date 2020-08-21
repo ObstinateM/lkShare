@@ -7,6 +7,13 @@
     <title>lkShare</title>
     <style>
     
+    p{
+        position:fixed;
+        color: #fff;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
     body{
         background-color: #2C2A4A;
         font-family: "Grand Hotel";
@@ -42,6 +49,8 @@
         padding: 10px 20px 10px 20px;
         font-size: 40px;
         font-family: "Grand Hotel";
+        border-radius: 10px;
+        border-width: 0px;
     }
 
     input[type="text" i]{
@@ -50,6 +59,7 @@
         margin-right: auto;
         width: 275px;
         height: 12px; 
+        border-width: 0px;
     }
 
     .grid{
@@ -68,6 +78,7 @@
     <!-- https://coolors.co/ffc6d9-bf9aca-2c2a4a-ffd166-7fdeff -->
 </head>
 <body>
+    <p>Developpé par Mathis Beauville</p>
     <div class="grid">
         <div class="card">
             <a href="{% url 'lkEmpty' %}">lkShare</a>
