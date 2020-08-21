@@ -9,7 +9,7 @@ def lkPage(request, urlid=None):
         form = forms.lkEmptyForm()
         if request.method == 'POST':
             form = forms.lkEmptyForm(request.POST)
-            if lk.objects.filter(url=urlid).exists():
+            if not(lk.objects.filter(url=urlid).exists()):
                 instance = form.save(commit=False)
                 viewUrl = instance.url
                 return redirect('lkFill', urlid=viewUrl)
@@ -17,6 +17,7 @@ def lkPage(request, urlid=None):
                 instance = form.save(commit=False)
                 viewUrl = instance.url
                 instance.save()
+                print("PLUS UN SUR LE ELSE")
                 return redirect('lkFill', urlid=viewUrl)
         context = {'form': form}
         return render(request, 'main/index.html', context)

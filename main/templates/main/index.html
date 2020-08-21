@@ -14,6 +14,9 @@
 
     h2{
         color: #FFD166;
+        margin-top: 75px;
+        margin-left: 110px;
+        margin-bottom: 0px;
     }
 
     a{
@@ -21,9 +24,7 @@
         display: block;
         text-align: center;
         margin: 0 auto;
-        margin-top: 2%;
-        magin-bottom: 100px;
-        background-color: #2C2A4A;
+        margin-top: 75px;
         color: #FFD166;
         font-size: 60px;
     }
@@ -37,8 +38,8 @@
         display: block;
         margin-right: auto;
         margin-left: auto;
-        margin-top: 3%;
-        padding: 10px 30px 10px 30px;
+        margin-top: 220px;
+        padding: 10px 20px 10px 20px;
         font-size: 40px;
         font-family: "Grand Hotel";
     }
@@ -47,22 +48,36 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 2%;
-        width: 20%;
-        height: 5vh;
+        width: 275px;
+        height: 12px;
     }
 
+    .grid{
+        display: grid;
+        place-items: center;
+        height: 100vh;
+    }
+
+    .card{
+        background-color: #BF9ACA;
+        border-radius: 10px;
+        width: 500px;
+        height: 700px;
+    }
     </style>
+    <!-- https://coolors.co/ffc6d9-bf9aca-2c2a4a-ffd166-7fdeff -->
 </head>
 <body>
-    <div class="card">
-        <a href="{% url 'lkEmpty' %}">lkShare</a>
-        <h2>Entre un mot-clé :</h2>
-        <form action="{% url 'lkEmpty' %}" method="POST">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Enregistrer">
-        </form>
+    <div class="grid">
+        <div class="card">
+            <a href="{% url 'lkEmpty' %}">lkShare</a>
+            <h2>Entre un mot-clé :</h2>
+            <form action="{% url 'lkEmpty' %}" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="GO !">
+            </form>
+        </div>
     </div>
 </body>
 </html>
