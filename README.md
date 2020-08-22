@@ -23,3 +23,6 @@ Go to localhost/8000
 
 ### In case of an error
 https://stackoverflow.com/questions/55657752/django-installing-mysqlclient-error-mysqlclient-1-3-13-or-newer-is-required
+
+
+## Preview it here : https://lkshare.herokuapp.com/ (It might take time to load, the server need to be restarted)
